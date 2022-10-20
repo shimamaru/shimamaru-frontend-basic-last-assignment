@@ -2,13 +2,19 @@
   "name": "frontend-basic-last-assignment-2021",
   "version": "1.0.0",
   "main": "src/page/index.html",
-  "repository": "https://github.com/shinonome-inc/frontend-basic-last-assignment-2021.git",
-  "author": "PG-frontend-teachers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinonome-inc/frontend-basic-last-assignment-2021.git"
+  },
+  "author": {
+    "name": "PG-frontend-teachers"
+  },
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build-sass": "gulp"
+    "build-sass": "gulp",
+    "chromatic": "npx chromatic --project-token=142f71e7f9d8"
   },
   "engines": {},
   "devDependencies": {
@@ -16,7 +22,7 @@
     "@storybook/addon-viewport": "^6.1.11",
     "@storybook/html": "^6.1.11",
     "babel-loader": "^8.2.2",
-    "chromatic": "^5.5.0",
+    "chromatic": "^6.10.2",
     "css-loader": "^5.0.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -26,5 +32,11 @@
     "sass": "^1.35.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/shinonome-inc/frontend-basic-last-assignment-2021/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/shinonome-inc/frontend-basic-last-assignment-2021#readme",
+  "_id": "frontend-basic-last-assignment-2021@1.0.0"
 }

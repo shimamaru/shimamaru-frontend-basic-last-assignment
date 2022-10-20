@@ -28,27 +28,3 @@ $fontfamily-gothic: "Roboto",
 sans-serif;
 $fontfamily-mincho: "Noto Serif JP",
 serif;
-
-@mixin breakpoint-xl {
-  @media screen and (min-width: ($breakpoint-xl)) {
-    @content;
-  }
-}
-
-@mixin breakpoint-lg {
-  @media screen and (min-width: ($breakpoint-lg)) and (max-width: 1199px) {
-    @content;
-  }
-}
-
-@mixin breakpoint-md {
-  @media screen and(min-width: 577px) and(max-width: 991px) {
-    @content;
-  }
-}
-
-@mixin breakpoint-sm {
-  @media screen and (max-width: ($breakpoint-sm)) {
-    @content;
-  }
-}

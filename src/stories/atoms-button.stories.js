@@ -5,4 +5,4 @@ export default {
   title: "Atoms/button"
 }
 
-export const Example = () => Item_button;
+export const button = () => Item_button;

@@ -13,11 +13,11 @@
   text-decoration : none;
   transition : all 0.2s ease;
 
-  @media screen and (max-width:$breakpoint-md) {
+  @media screen and (max-width:$breakpoint-lg) {
     width : 150px;
   }
 
-  @media screen and (max-width:$breakpoint-sm) {
+  @media screen and (max-width:$breakpoint-md) {
     width : 180px;
     height : 45px;
   }

@@ -1,5 +1,5 @@
-import Item_News_And_Events_Title from "../components/molecules/news-and-events-title/news-and-events-title.html";
-import "../components/molecules/news-and-events-title/news-and-events-title.scss";
+import Item_News_And_Events_Title from "../components/molecules/NewsAndEventsTitle/News_And_Events_Title.html";
+import "../components/molecules/NewsAndEventsTitle/News_And_Events_Title.scss";
 
 export default { title: "Molecules/NewsAndEventsTitle" }
 

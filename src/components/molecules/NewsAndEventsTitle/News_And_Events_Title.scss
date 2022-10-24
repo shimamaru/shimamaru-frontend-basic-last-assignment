@@ -2,36 +2,34 @@
 
 
 .news {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 
   .news__title {
-    width: 105px;
-    height: 57px;
+    display: inline-block;
+    vertical-align: middle;
     font-family: $fontfamily-mincho;
-    font-size: 40px;
+    font-size: $fontsize-xxl;
     line-height: 57px;
     margin-bottom: 0;
     margin-right: 16px;
 
-
     @media screen and (max-width: $breakpoint-lg) {
-      width: 53px;
-      height: 24px;
-      font-size: 20px;
+      font-size: $fontsize-l;
+      line-height: 28px;
     }
   }
 
   .news__sub-title {
-    width: 64px;
-    height: 23px;
+    font-size: $fontsize-m;
+    display: inline-block;
+    vertical-align: middle;
     line-height: 23px;
-    margin: 0;
-  }
+    margin-bottom: -6px;
 
-  @media screen and (max-width: $breakpoint-lg) {
-    width: 64px;
-    height: 23px;
-    font-size: 16px;
+    @media screen and (max-width: $breakpoint-lg) {
+    font-size: $fontsize-s;
+    margin: 0;
+    }
   }
 }

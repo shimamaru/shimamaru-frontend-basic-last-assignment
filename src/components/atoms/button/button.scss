@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.button {
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  width : 200px;
+  height : 55px;
+  background-color : $black;
+  color : $white;
+  font-size : $fontsize-s;
+  line-height : 20px;
+  text-decoration : none;
+  transition : all 0.2s ease;
+
+  @media screen and (max-width:$breakpoint-lg) {
+    width : 150px;
+  }
+
+  @media screen and (max-width:$breakpoint-md) {
+    width : 180px;
+    height : 45px;
+  }
+
+  &:hover {
+    background-color : $orange_bistre;
+    color : $white;
+  }
+}

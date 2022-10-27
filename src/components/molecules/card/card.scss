@@ -7,15 +7,18 @@
     overflow: hidden;
 
     >img {
-      transition: 0.3s;
+      transition: all ease 0.5s;
 
+      /* ボバー時のアクション */
       &:hover {
-        transform: scale(1.3);
+        /* transformは変形プロパティ。値にscaleを指定すると拡大縮小することができる。 */
+        transform: scale(1.2);
       }
     }
   }
 
   .card-body {
+
     &::before {
       content: "";
       top: 0;
@@ -53,11 +56,4 @@
 
 .button {
   margin: 0 auto 32px;
-}
-
-
-/* ボバー時のアクション */
-img:hover {
-  /* transformは変形プロパティ。値にscaleを指定すると拡大縮小することができる。 */
-  transform: scale(1.3);
 }

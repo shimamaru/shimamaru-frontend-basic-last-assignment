@@ -9,25 +9,29 @@
     >img {
       transition: all ease 0.5s;
 
-      /* ボバー時のアクション */
-      &:hover {
-        /* transformは変形プロパティ。値にscaleを指定すると拡大縮小することができる。 */
-        transform: scale(1.2);
+      @media screen and (min-width:$breakpoint-md) {
+
+        /* ボバー時のアクション */
+        &:hover {
+          /* transformは変形プロパティ。値にscaleを指定すると拡大縮小することができる。 */
+          transform: scale(1.2);
+        }
       }
     }
   }
+}
 
-  .card-body {
+.card-body {
+  padding: 0;
 
-    &::before {
-      content: "";
-      top: 0;
-      left: 0;
-      border-bottom: 150px solid transparent;
-      border-left: 150px solid $white;
-      position: absolute;
-      z-index: 2;
-    }
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid $white;
+    position: absolute;
+    z-index: 2;
   }
 
   &::after {
@@ -39,19 +43,20 @@
     position: absolute;
     z-index: 3;
   }
+}
 
-  .card-title {
-    position: absolute;
-    top: 0;
-    left: 6px;
-    z-index: 4;
-    font-size: $fontsize-l;
-  }
+.card-title {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  font-weight: 700;
+  z-index: 4;
+  font-size: $fontsize-l;
+}
 
-  .card-text {
-    margin: 32px 0 30px 32px;
-    font-size: $fontsize-s;
-  }
+.card-text {
+  margin: 32px 0 30px 32px;
+  font-size: $fontsize-s;
 }
 
 .button {

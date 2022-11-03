@@ -1,0 +1,59 @@
+@import "../../variables";
+
+
+header {
+
+  .header__inner {
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    background-color: $black;
+
+    @media screen and (min-width:$breakpoint-xl) {
+      height: 90px;
+      background-color: $gray_nobel;
+      width: 100%;
+    }
+
+    .header__title {
+      padding-left: 16px;
+      width: 120px;
+      height: 20.56px;
+
+      @media screen and (min-width:$breakpoint-xl) {
+        width: 140px;
+        height: 24px;
+        padding-left: 30px;
+      }
+
+      >a>img {
+        width: 100%;
+        vertical-align: top;
+
+      }
+    }
+
+    .header__list {
+      list-style: none;
+      display: flex;
+      margin: 0;
+
+      .header__list:last-child {
+        padding-right: 50px;
+      }
+
+      .header__item {
+        display: none;
+        text-transform: uppercase;
+        padding-right: 40px;
+        font-size: $fontsize-s;
+
+        @media screen and (min-width:$breakpoint-xl) {
+          display: block;
+        }
+      }
+    }
+  }
+}

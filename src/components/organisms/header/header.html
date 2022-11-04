@@ -15,9 +15,28 @@
       <li class="header__item">Accses</li>
       <li class="header__item">Download</li>
     </ul>
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        Link with href
+      </a>
+    </p>
   </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveMenu"
-    aria-controls="responsiveMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user
+      activates the relevant trigger.
+    </div>
+  </div>
 </header>
+
+<input id="checkbox" type="checkbox">
+<label id="menu01" class="menu-trigger" for="checkbox">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+<div>
+  チェックされたよ！
+</div>

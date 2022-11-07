@@ -5,6 +5,11 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
+  margin: 52px 20px;
+
+  @media screen and (max-width:$breakpoint-lg) {
+    margin: 32px 20px;
+  }
 
   .message__title {
     font-size: $fontsize-xl;

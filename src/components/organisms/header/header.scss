@@ -1,8 +1,6 @@
 @import "../../variables";
 
 header {
-
-
   .header__inner {
     position: relative;
     height: 60px;
@@ -14,7 +12,7 @@ header {
 
     @media screen and (min-width:$breakpoint-xl) {
       height: 90px;
-      background-color: $gray_nobel;
+      background-color: $black_50;
       width: 100%;
     }
 
@@ -23,7 +21,7 @@ header {
       width: 120px;
       height: 20.56px;
 
-      @media screen and (min-width:$breakpoint-xl) {
+      @media screen and (max-width:$breakpoint-xl) {
         width: 140px;
         height: 24px;
         padding-left: 30px;
@@ -32,7 +30,6 @@ header {
       >a>img {
         width: 100%;
         vertical-align: top;
-
       }
     }
 
@@ -45,11 +42,35 @@ header {
         padding-right: 50px;
       }
 
+
+      // グローバルナビのレイアウト
+      .gbl-nav {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translate(-110px);
+        display: none;
+
+        .nav__item {
+          width: 220px;
+        }
+      }
+
       .header__item {
         display: none;
         text-transform: uppercase;
         padding-right: 40px;
+        cursor: pointer;
         font-size: $fontsize-s;
+
+        .header__link {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            color: $gray_nobel;
+          }
+        }
 
         @media screen and (min-width:$breakpoint-xl) {
           display: block;
@@ -57,76 +78,185 @@ header {
       }
     }
   }
+
+  .collapse {
+
+    .collapse__content {
+
+      .collapse__list {
+        margin: 0;
+        padding: 0;
+
+        .collapse__item-concept {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .concept-button {
+            position: relative;
+            display: block;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 1px $white solid;
+            margin-right: 16px;
+
+            @media screen and (min-width:$breakpoint-xl) {
+              display: none;
+            }
+          }
+
+          ::before {
+            position: absolute;
+            top: 7.5px;
+            left: 11px;
+            content: "";
+            display: block;
+            height: 10px;
+            width: 2px;
+            background-color: $white;
+
+          }
+
+          ::after {
+            position: absolute;
+            top: 11.5px;
+            left: 7px;
+            content: "";
+            display: block;
+            height: 2px;
+            width: 10px;
+            background-color: $white;
+          }
+        }
+      }
+    }
+
+    .collapse__item {
+      height: 56px;
+      background-color: $black;
+      display: flex;
+      align-items: center;
+      padding-left: 18px;
+      text-transform: uppercase;
+
+      .sub-nav {
+        margin-left: 28px;
+
+        @media screen and (min-width:$breakpoint-xl) {
+          display: none;
+        }
+
+        .nav__item {
+          width: 100%;
+          padding-left: 28px;
+        }
+      }
+
+      .collapse__link {
+        text-decoration: none;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
-.card {
-  position: relative;
-}
+
+// ハンバーガーメニューの実装
 
 /*チェックボックスを非表示*/
 #checkbox {
   opacity: 0;
-  width: 0;
-  height: 0;
 }
 
-.menu-trigger,
-.menu-trigger span {
-  display: inline-block;
-  transition: all 0.4s;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 100;
-}
-
-.menu-trigger {
-  position: relative;
-  width: 32px;
-  height: 26px;
-  background: none;
-  border: none;
-  appearance: none;
-  cursor: pointer;
-}
-
-.menu-trigger span {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #172a22;
-  border-radius: 4px;
-}
-
-.menu-trigger span:nth-of-type(1) {
-  top: 0;
-}
-
-.menu-trigger span:nth-of-type(2) {
-  top: 11px;
-}
-
-.menu-trigger span:nth-of-type(3) {
-  bottom: 0;
-}
-
-/*チェックボックスにチェックが入ったら*/
-#checkbox:checked+label span:nth-of-type(1) {
-  transform: translateY(11px) rotate(-45deg);
-}
-
-#checkbox:checked+label span:nth-of-type(2) {
-  opacity: 0;
-}
-
-#checkbox:checked+label span:nth-of-type(3) {
-  transform: translateY(-11px) rotate(45deg);
-}
-
-div {
+// 常時はハンバーガーメニューを非表示
+.ham-menu {
   display: none;
 }
 
-#checkbox:checked+label+div {
-  display: block;
+@media screen and (max-width:$breakpoint-xl) {
+
+  .ham-menu {
+    display: block;
+    padding-right: 28.5px;
+  }
+
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    transition: all 0.4s;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+  }
+
+  .menu-trigger {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $white;
+    border-radius: 1px;
+  }
+
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .menu-trigger span:nth-of-type(2) {
+    top: 6px;
+  }
+
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  /*チェックボックスにチェックが入ったら*/
+  #checkbox:checked+label span:nth-of-type(1) {
+    transform: translateY(6px) rotate(-45deg);
+  }
+
+  #checkbox:checked+label span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #checkbox:checked+label span:nth-of-type(3) {
+    transform: translateY(-6px) rotate(45deg);
+  }
+}
+
+#checkbox:checked .header__inner {
+  display: none;
+}
+
+
+// 共通ナビ
+.nav {
+  flex-direction: column;
+  background-color: $black;
+
+
+  .nav__item {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding-left: 36px;
+    text-transform: uppercase;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: $white;
+  }
 }

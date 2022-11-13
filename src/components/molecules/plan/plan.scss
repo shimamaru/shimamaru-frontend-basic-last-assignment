@@ -2,6 +2,8 @@
 
 // 通常時のスタイル
 .plan {
+    margin: 0 0 20px 0;
+
 
   .plan__title {
     display: flex;
@@ -19,7 +21,6 @@
   .plan__price-outer {
     background-color: $gray_desertStorm;
     border: 1px solid $gray_gainsboro;
-
     .and {
       padding-top: 25px;
       padding-right: 4px;
@@ -77,7 +78,6 @@
 
 // スタンダード時のスタイル
 .plan--std {
-  margin-top: 60px;
   box-sizing: content-box;
   outline: 5px solid $orange_bistre;
 

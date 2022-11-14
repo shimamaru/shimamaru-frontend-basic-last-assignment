@@ -2,14 +2,17 @@
 
 // 通常時のスタイル
 .plan {
+  margin: 0;
+  
+    @media screen and (max-width:$breakpoint-sm) {
     margin: 0 0 20px 0;
-
+}
 
   .plan__title {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:$orange_zorba;
+    background-color: $orange_zorba;
     color: $white;
     font-size: $fontsize-l;
     height: 69px;
@@ -21,6 +24,7 @@
   .plan__price-outer {
     background-color: $gray_desertStorm;
     border: 1px solid $gray_gainsboro;
+
     .and {
       padding-top: 25px;
       padding-right: 4px;

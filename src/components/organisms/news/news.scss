@@ -12,7 +12,14 @@
       margin: 0;
       background-color: $white;
       border: 1px solid $gray_gainsboro;
-      font-family: $fontfamily-gothic;
+      border-bottom: none;
+      border-collapse: collapse;
+
+      &:last-child {
+        border-bottom: 1px solid $gray_gainsboro;
+      }
+
+
 
       .news__date {
         margin: 0;
@@ -34,5 +41,16 @@
 
   .news__info {
     text-align: right;
+  }
+}
+
+
+
+.news__link {
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    color: $orange_bistre;
   }
 }

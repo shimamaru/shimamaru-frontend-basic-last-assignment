@@ -33,12 +33,6 @@
 
     .message {
       background-color: $white_smoke;
-      padding: 32px 20px;
-      width: 100%;
-
-      @media screen and (min-width:$breakpoint-lg) {
-        padding: 52px 20px;
-      }
 
       .message__title {
         color: $orange_bistre;

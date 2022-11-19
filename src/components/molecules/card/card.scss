@@ -8,61 +8,69 @@
   >.img-frame {
     overflow: hidden;
 
-    >img {
-      transition: all ease 0.5s;
 
-      @media screen and (min-width:$breakpoint-md) {
-
-        /* ボバー時のアクション */
-        &:hover {
-          /* transformは変形プロパティ。値にscaleを指定すると拡大縮小することができる。 */
-          transform: scale(1.2);
-        }
-      }
-    }
   }
 }
 
 .card-body {
+
   padding: 0;
   color: $black;
 
-  &::before {
-    content: "";
+  .img-frame {
+    overflow: hidden;
+
+
+    >img {
+      transition: all ease 0.5s;
+
+      @media screen and (max-width:$breakpoint-md) {
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      border-bottom: 150px solid transparent;
+      border-left: 150px solid $white;
+      position: absolute;
+      z-index: 2;
+    }
+
+    &::after {
+      display: block;
+      top: 5px;
+      left: 0;
+      transform: rotate(-45deg);
+      color: $black;
+      position: absolute;
+      z-index: 3;
+    }
+  }
+
+
+  .card-title {
+    color: $orange_bistre;
+    position: absolute;
     top: 0;
-    left: 0;
-    border-bottom: 150px solid transparent;
-    border-left: 150px solid $white;
-    position: absolute;
-    z-index: 2;
+    left: 6px;
+    font-weight: 700;
+    z-index: 4;
+    font-size: $fontsize-l;
   }
 
-  &::after {
-    display: block;
-    top: 5px;
-    left: 0;
-    transform: rotate(-45deg);
-    color: $black;
-    position: absolute;
-    z-index: 3;
+  .card-text {
+    margin: 32px 30px;
+    font-size: $fontsize-s;
   }
-}
 
-.card-title {
-  color: $orange_bistre;
-  position: absolute;
-  top: 0;
-  left: 6px;
-  font-weight: 700;
-  z-index: 4;
-  font-size: $fontsize-l;
-}
+  .button {
+    margin: 0 auto 32px;
+  }
 
-.card-text {
-  margin: 32px 30px;
-  font-size: $fontsize-s;
-}
-
-.button {
-  margin: 0 auto 32px;
 }

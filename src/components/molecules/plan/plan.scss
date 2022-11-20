@@ -3,10 +3,10 @@
 // 通常時のスタイル
 .plan {
   margin: 0;
-  
-    @media screen and (max-width:$breakpoint-sm) {
+
+  @media screen and (max-width: $breakpoint-sm) {
     margin: 0 0 20px 0;
-}
+  }
 
   .plan__title {
     display: flex;
@@ -36,7 +36,7 @@
       display: flex;
       justify-content: center;
       padding: 23px 0 16px;
-      font-family: 'Noto Sans JP';
+      font-family: "Noto Sans JP";
       font-weight: 700;
       font-size: 40px;
       color: $orange_bistre;
@@ -82,8 +82,8 @@
 
 // スタンダード時のスタイル
 .plan--std {
-  box-sizing: content-box;
-  outline: 5px solid $orange_bistre;
+  box-sizing: border-box;
+  border: 5px solid $orange_bistre;
 
   .plan__title {
     background-color: $orange_bistre;

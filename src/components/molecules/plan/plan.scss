@@ -5,7 +5,7 @@
   margin: 0;
 
   @media screen and (max-width: $breakpoint-sm) {
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
   }
 
   .plan__title {
@@ -58,14 +58,8 @@
     background-color: $white;
   }
 
-  .plan__item :nth-child(1) {
-    border-top: 1px;
-  }
-
-  .plan__item :nth-child(1),
-  .plan__item :nth-child(2),
-  .plan__item :nth-child(3) {
-    border-bottom: 0px;
+  .plan__item:last-child {
+    border-bottom: 1px solid $gray_gainsboro;
   }
 
   .plan__item-list {
@@ -77,15 +71,16 @@
     font-size: $fontsize-s;
     box-sizing: border-box;
     border: 1px solid $gray_gainsboro;
+    border-bottom: none;
   }
-}
 
-// スタンダード時のスタイル
-.plan--std {
-  box-sizing: border-box;
-  border: 5px solid $orange_bistre;
+  // スタンダード時のスタイル
+  &.plan--std {
+    box-sizing: border-box;
+    border: 5px solid $orange_bistre;
 
-  .plan__title {
-    background-color: $orange_bistre;
+    .plan__title {
+      background-color: $orange_bistre;
+    }
   }
 }

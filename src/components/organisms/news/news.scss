@@ -7,19 +7,15 @@
     margin-bottom: 30px;
 
     .news__item {
-      height: 85px;
       padding: 20px 26px 20px 20px;
       margin: 0;
       background-color: $white;
       border: 1px solid $gray_gainsboro;
       border-bottom: none;
-      border-collapse: collapse;
 
       &:last-child {
         border-bottom: 1px solid $gray_gainsboro;
       }
-
-
 
       .news__date {
         margin: 0;
@@ -43,8 +39,6 @@
     text-align: right;
   }
 }
-
-
 
 .news__link {
   text-decoration: none;

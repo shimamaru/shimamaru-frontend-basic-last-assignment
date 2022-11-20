@@ -1,0 +1,57 @@
+@import "../../variables";
+
+.card {
+  position: relative;
+  border: 0px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+
+  > .img-frame {
+    overflow: hidden;
+  }
+}
+
+.card-body {
+  padding: 0;
+  color: $black;
+
+  .img-frame {
+    overflow: hidden;
+
+    > img {
+      transition: all ease 0.5s;
+
+      @media screen and (min-width: $breakpoint-md) {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      top: 0;
+      left: 0;
+      border-bottom: 150px solid transparent;
+      border-left: 150px solid $white;
+      position: absolute;
+    }
+  }
+
+  .card-title {
+    color: $orange_bistre;
+    position: absolute;
+    top: 0;
+    left: 6px;
+    font-weight: 700;
+    font-size: $fontsize-l;
+  }
+
+  .card-text {
+    margin: 32px 30px;
+    font-size: $fontsize-s;
+  }
+
+  .button {
+    margin: 0 auto 32px;
+  }
+}

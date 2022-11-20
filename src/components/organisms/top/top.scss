@@ -1,0 +1,63 @@
+@import "../../variables";
+
+.top {
+  .top__kv {
+    height: 768px;
+    width: 100%;
+    background-image: url(../../../img/top.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      height: 560px;
+    }
+
+    .top__kv-text {
+      writing-mode: vertical-rl;
+      font-size: $fontsize-xl;
+      color: $white;
+      font-family: $fontfamily-mincho;
+      font-weight: 400;
+      line-height: 52px;
+      margin: 0;
+
+      @media screen and (max-width: $breakpoint-lg) {
+        font-size: $fontsize-l;
+      }
+    }
+  }
+
+  .top__content {
+    background-color: $black;
+    color: $white;
+
+    .top__content-inner {
+      width: 90%;
+      margin: 0 auto;
+      padding: 52px 0 72px;
+
+      @media screen and (max-width: $breakpoint-lg) {
+        width: 67%;
+        padding: 32px 0;
+      }
+    }
+
+    .message__title {
+      margin: 0;
+      padding-bottom: 10px;
+
+      @media screen and (max-width: $breakpoint-lg) {
+        padding-bottom: 6px;
+        text-align: left;
+      }
+
+      .message__text {
+        @media screen and (max-width: $breakpoint-lg) {
+          font-size: $fontsize-s;
+        }
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@
     background-color: $orange_zorba;
     color: $white;
     font-size: $fontsize-l;
-    height: 69px;
+    padding: 15.5px;
     line-height: 29px;
     font-weight: 700;
     margin: 0;
@@ -24,11 +24,11 @@
   .plan__price-outer {
     background-color: $gray_desertStorm;
     border: 1px solid $gray_gainsboro;
+    border-bottom: none;
 
     .and {
       padding-top: 25px;
       padding-right: 4px;
-      font-family: $fontfamily-gothic;
       font-size: $fontsize-l;
     }
 
@@ -64,7 +64,7 @@
 
   .plan__item-list {
     text-align: center;
-    min-height: 60px;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +81,16 @@
 
     .plan__title {
       background-color: $orange_bistre;
+      box-sizing: border-box;
+      padding-top: 10.5px;
+    }
+
+    .plan__item-list:last-child {
+      padding-bottom: 15px;
     }
   }
+}
+
+.wrap {
+  display: flex;
 }

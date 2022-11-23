@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.cards__wrap {
+  display: flex;
+  .card {
+    .card-body {
+      background-color: $gray_desertStorm;
+
+      .img-frame {
+        .card-img-top {
+        }
+      }
+
+      .card-text {
+      }
+    }
+  }
+}

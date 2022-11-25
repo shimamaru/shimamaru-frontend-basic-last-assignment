@@ -81,6 +81,16 @@ footer {
       .footer__nav-item:last-child {
         border-right: none;
       }
+
+      .footer__nav-link {
+        text-decoration: none;
+        color: $black;
+        transition: all 2s ease;
+
+        &:hover {
+          color: $orange_bistre;
+        }
+      }
     }
   }
   .footer__copy-right {
@@ -91,15 +101,5 @@ footer {
     align-items: center;
     color: $white;
     background-color: $black;
-  }
-}
-
-.footer__nav-link {
-  text-decoration: none;
-  color: $black;
-  transition: all 2s ease;
-
-  &:hover {
-    color: $orange_bistre;
   }
 }

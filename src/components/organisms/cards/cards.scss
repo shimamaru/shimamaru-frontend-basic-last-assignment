@@ -4,7 +4,17 @@
   display: flex;
   justify-content: center;
   padding: 0 24px 90px;
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 0 24px;
+  }
 
+  .card:nth-child(2) .card-title {
+    left: 30px;
+
+    @media screen and (max-width: $breakpoint-md) {
+      left: 6px;
+    }
+  }
   @media screen and (max-width: $breakpoint-md) {
     display: block;
   }
@@ -20,6 +30,10 @@
 
       .card-title {
         text-transform: uppercase;
+
+        .card:nth-child(2) > .card-title {
+          left: 30px;
+        }
       }
       .img-frame {
         width: auto;

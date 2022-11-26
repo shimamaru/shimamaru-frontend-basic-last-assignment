@@ -1,0 +1,10 @@
+@import "../../variables";
+
+.cards__wrap {
+  display: flex;
+  .card {
+    .card-body {
+      background-color: $gray_desertStorm;
+    }
+  }
+}

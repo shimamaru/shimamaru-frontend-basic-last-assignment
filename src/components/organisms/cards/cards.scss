@@ -8,13 +8,6 @@
     padding: 0 24px;
   }
 
-  .card:nth-child(2) .card-title {
-    left: 30px;
-
-    @media screen and (max-width: $breakpoint-md) {
-      left: 6px;
-    }
-  }
   @media screen and (max-width: $breakpoint-md) {
     display: block;
   }
@@ -30,10 +23,6 @@
 
       .card-title {
         text-transform: uppercase;
-
-        .card:nth-child(2) > .card-title {
-          left: 30px;
-        }
       }
       .img-frame {
         width: auto;
@@ -45,9 +34,10 @@
   }
 
   .card:nth-child(2) {
-    padding: 0 24px;
+    margin: 0 24px;
 
     @media screen and (max-width: $breakpoint-md) {
+      margin: 0;
       padding: 0 0 40px;
     }
   }

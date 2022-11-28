@@ -1,0 +1,339 @@
+@import "../../variables";
+
+header {
+  .header__inner {
+    position: relative;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    background-color: $black;
+
+<<<<<<< Updated upstream
+    @media screen and (min-width:$breakpoint-xl) {
+=======
+    @media screen and (min-width: $breakpoint-xl) {
+>>>>>>> Stashed changes
+      height: 90px;
+      background-color: $black_50;
+      width: 100%;
+    }
+
+    .header__title {
+      padding-left: 16px;
+      width: 120px;
+      height: 20.56px;
+
+<<<<<<< Updated upstream
+      @media screen and (max-width:$breakpoint-xl) {
+=======
+      @media screen and (max-width: $breakpoint-xl) {
+>>>>>>> Stashed changes
+        width: 140px;
+        height: 24px;
+        padding-left: 30px;
+      }
+
+<<<<<<< Updated upstream
+      >a>img {
+=======
+      > a > img {
+>>>>>>> Stashed changes
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+
+    .header__list {
+      list-style: none;
+      display: flex;
+      margin: 0;
+
+      .header__list:last-child {
+        padding-right: 50px;
+      }
+
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+      // グローバルナビのレイアウト
+      .gbl-nav {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translate(-110px);
+<<<<<<< Updated upstream
+        display: none;
+=======
+>>>>>>> Stashed changes
+
+        .nav__item {
+          width: 220px;
+        }
+      }
+
+      .header__item {
+        display: none;
+        text-transform: uppercase;
+        padding-right: 40px;
+        cursor: pointer;
+        font-size: $fontsize-s;
+
+        .header__link {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            color: $gray_nobel;
+          }
+        }
+
+<<<<<<< Updated upstream
+        @media screen and (min-width:$breakpoint-xl) {
+=======
+        @media screen and (min-width: $breakpoint-xl) {
+>>>>>>> Stashed changes
+          display: block;
+        }
+      }
+    }
+  }
+
+<<<<<<< Updated upstream
+  .collapse {
+
+    .collapse__content {
+
+=======
+  .concept__toggle {
+    .collapse__content {
+>>>>>>> Stashed changes
+      .collapse__list {
+        margin: 0;
+        padding: 0;
+
+        .collapse__item-concept {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .concept-button {
+            position: relative;
+            display: block;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 1px $white solid;
+            margin-right: 16px;
+<<<<<<< Updated upstream
+
+            @media screen and (min-width:$breakpoint-xl) {
+              display: none;
+            }
+=======
+>>>>>>> Stashed changes
+          }
+
+          ::before {
+            position: absolute;
+            top: 7.5px;
+            left: 11px;
+            content: "";
+            display: block;
+            height: 10px;
+            width: 2px;
+            background-color: $white;
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+          }
+
+          ::after {
+            position: absolute;
+            top: 11.5px;
+            left: 7px;
+            content: "";
+            display: block;
+            height: 2px;
+            width: 10px;
+            background-color: $white;
+          }
+        }
+      }
+    }
+
+    .collapse__item {
+      height: 56px;
+      background-color: $black;
+      display: flex;
+      align-items: center;
+      padding-left: 18px;
+      text-transform: uppercase;
+
+      .sub-nav {
+        margin-left: 28px;
+
+<<<<<<< Updated upstream
+        @media screen and (min-width:$breakpoint-xl) {
+=======
+        @media screen and (min-width: $breakpoint-xl) {
+>>>>>>> Stashed changes
+          display: none;
+        }
+
+        .nav__item {
+          width: 100%;
+          padding-left: 28px;
+        }
+      }
+
+      .collapse__link {
+        text-decoration: none;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+// ハンバーガーメニューの実装
+
+/*チェックボックスを非表示*/
+#checkbox {
+  opacity: 0;
+}
+
+// 常時はハンバーガーメニューを非表示
+.ham-menu {
+  display: none;
+}
+
+<<<<<<< Updated upstream
+@media screen and (max-width:$breakpoint-xl) {
+
+=======
+@media screen and (max-width: $breakpoint-xl) {
+>>>>>>> Stashed changes
+  .ham-menu {
+    display: block;
+    padding-right: 28.5px;
+  }
+
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    transition: all 0.4s;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+  }
+
+  .menu-trigger {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $white;
+    border-radius: 1px;
+  }
+
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .menu-trigger span:nth-of-type(2) {
+    top: 6px;
+  }
+
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  /*チェックボックスにチェックが入ったら*/
+<<<<<<< Updated upstream
+  #checkbox:checked+label span:nth-of-type(1) {
+    transform: translateY(6px) rotate(-45deg);
+  }
+
+  #checkbox:checked+label span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #checkbox:checked+label span:nth-of-type(3) {
+=======
+  #checkbox:checked + label span:nth-of-type(1) {
+    transform: translateY(6px) rotate(-45deg);
+  }
+
+  #checkbox:checked + label span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #checkbox:checked + label span:nth-of-type(3) {
+>>>>>>> Stashed changes
+    transform: translateY(-6px) rotate(45deg);
+  }
+}
+
+<<<<<<< Updated upstream
+#checkbox:checked .header__inner {
+  display: none;
+}
+
+=======
+// #checkbox:checked .header__inner {
+//   display: none;
+// }
+>>>>>>> Stashed changes
+
+// 共通ナビ
+.nav {
+  flex-direction: column;
+  background-color: $black;
+
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+  .nav__item {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding-left: 36px;
+    text-transform: uppercase;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: $white;
+  }
+<<<<<<< Updated upstream
+}
+=======
+}
+
+.gbl-nav {
+  visibility: hidden;
+}
+
+.concept:hover .gbl-nav {
+  visibility: visible;
+}
+>>>>>>> Stashed changes

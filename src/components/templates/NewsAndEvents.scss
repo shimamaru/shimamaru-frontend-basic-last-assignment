@@ -1,0 +1,42 @@
+@import "../variables";
+
+.news-events__wrap {
+  background-color: $white_smoke;
+  margin: 0 auto;
+  padding: 60px 14% 57px;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    display: flex;
+    padding: 56px 16px;
+  }
+
+  .news {
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-right: 20px;
+      width: 50%;
+    }
+  }
+
+  .events {
+    padding: 0;
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-left: 20px;
+      width: 50%;
+
+      .event-card {
+        > a {
+          height: 143px;
+        }
+      }
+    }
+    .event-caption {
+      h3 {
+        font-weight: 400;
+      }
+    }
+  }
+}

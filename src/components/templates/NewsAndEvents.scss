@@ -3,7 +3,7 @@
 .news-events__wrap {
   background-color: $white_smoke;
   margin: 0 auto;
-  padding: 60px 14% 57px;
+  padding: 57px 14%;
 
   @media screen and (min-width: $breakpoint-lg) {
     display: flex;
@@ -12,6 +12,7 @@
 
   .news {
     width: 100%;
+    padding-bottom: 35px;
 
     @media screen and (min-width: $breakpoint-lg) {
       padding-right: 20px;

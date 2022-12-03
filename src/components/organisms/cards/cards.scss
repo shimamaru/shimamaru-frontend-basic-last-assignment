@@ -2,9 +2,41 @@
 
 .cards__wrap {
   display: flex;
+  justify-content: center;
+  padding: 0 24px 90px;
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 0 24px;
+    display: block;
+  }
+
   .card {
-    .card-body {
-      background-color: $gray_desertStorm;
+    flex: 1;
+
+    &:nth-child(2) {
+      margin: 0 24px;
+
+      @media screen and (max-width: $breakpoint-md) {
+        padding-bottom: 40px;
+      }
+
+      .card-body {
+        background-color: $white_smoke;
+
+        .card-title {
+          text-transform: uppercase;
+        }
+        .img-frame {
+          width: auto;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+      margin: 0;
+      padding: 0 0 40px;
     }
   }
 }

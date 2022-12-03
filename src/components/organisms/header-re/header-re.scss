@@ -1,0 +1,362 @@
+@import "../../variables";
+
+header {
+  .bg-light {
+    background-color: $gray_nobel !important;
+    @media screen and (max-width: $breakpoint-lg) {
+      background-color: $black !important;
+    }
+  }
+
+  .header__inner {
+    padding: 0;
+    margin: 0;
+    .navbar-brand {
+      display: flex;
+      padding: 33px 0 33px 30px;
+      @media screen and (max-width: $breakpoint-lg) {
+        padding: 20px 0 20px 16px;
+      }
+    }
+
+    .fa-solid {
+      color: $white;
+    }
+
+    .navbar-toggler {
+      border: none;
+      padding: 22px 16px 22px 0;
+      box-shadow: none;
+    }
+
+    .navbar-light {
+      display: none;
+    }
+    .header__logo {
+      width: 140px;
+    }
+
+    .header__list {
+      flex-grow: inherit;
+      padding-right: 40px;
+
+      @media screen and (max-width: $breakpoint-lg) {
+        padding-left: 16px;
+      }
+      .navbar-nav {
+        padding: 0;
+        margin: 0 !important;
+
+        .nav-item {
+          color: $white;
+          font-size: $fontsize-s;
+          text-transform: uppercase;
+
+          .nav-link {
+            color: $white !important;
+            transition: all 2s ease;
+            @media screen and (max-width: $breakpoint-lg) {
+              padding: 16px 0 !important;
+            }
+          }
+
+          .nav-link::after {
+            display: none;
+          }
+        }
+
+        .dropdown-menu {
+          position: absolute;
+          top: 72px;
+          background-color: $black;
+          width: 220px;
+          padding: 0;
+          margin: 0 !important;
+          border: none;
+          border-radius: 0%;
+          @media screen and (max-width: $breakpoint-lg) {
+            position: static;
+          }
+
+          .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding-left: 18px;
+            height: 56px;
+            color: $white;
+            font-size: $fontsize-s;
+            transition: all 0.2s ease;
+
+            &:hover {
+              background-color: $orange_bistre;
+              @media screen and (max-width: $breakpoint-lg) {
+                background-color: $black !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+// header {
+//   .bg-light {
+//     background-color: $gray_nobel !important;
+//     height: 90px;
+//   }
+
+//   .header__inner {
+//     padding: 0 50px 0 30px;
+//   }
+
+//   .header__logo {
+//     width: 140px;
+//     padding-left: 30px;
+//   }
+//   .navbar-brand {
+//     display: flex;
+//     width: 140px;
+//     height: 34px;
+//   }
+
+//   .header__list {
+//     flex-grow: inherit;
+//   }
+
+//   .nav-link {
+//     color: $white !important;
+//   }
+
+//   .nav-link::after {
+//     display: none;
+//   }
+
+//   .dropdown-menu {
+//     background-color: $black;
+//     width: 220px;
+//     padding: 0;
+//     margin: 0 !important;
+//     border: none;
+
+//     .dropdown-item {
+//       display: flex;
+//       align-items: center;
+//       padding-left: 18px;
+//       height: 56px;
+//       color: $white;
+//       font-size: $fontsize-s;
+//     }
+//   }
+
+//   .dropdown:hover > .dropdown-menu {
+//     display: block;
+//   }
+
+//   .navbar-toggler {
+//     border: none;
+//     padding: 0;
+//   }
+
+//   .nav-link {
+//     text-transform: uppercase;
+//   }
+
+//   .nav-item {
+//     font-size: $fontsize-s;
+//   }
+
+//   @media screen and (max-width: $breakpoint-lg) {
+//     .header__list {
+//       position: absolute;
+//       top: 90px;
+//       left: 0;
+//       background-color: $black;
+//       width: 100%;
+//       z-index: 20;
+//     }
+
+//     .nav-item {
+//       display: flex;
+//       align-items: center;
+//       padding-left: 18px;
+//       height: 56px;
+//       color: $white;
+//     }
+//   }
+//   .dropdown:hover > .dropdown-menu {
+//     visibility: hidden;
+//   }
+
+// @use "../../variables" as *;
+// .navbar {
+//   background-color: $black;
+//   padding: 0;
+//   @media (min-width: $breakpoint-xl) {
+//     height: 90px;
+//     width: 100%;
+//     background-color: $black_50;
+//     padding: 0 30px;
+//     position: relative;
+//   }
+//   .hamberger-header {
+//     height: 60px;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     margin: 0 16px;
+//     @media (min-width: $breakpoint-xl) {
+//       margin: 0;
+//     }
+//     & > a > .img-switch {
+//       height: 20.55944061279297px;
+//       width: 120px;
+//       @media (min-width: $breakpoint-xl) {
+//         height: 23.986011505126953px;
+//         width: 140px;
+//       }
+//     }
+//     .navbar-toggler {
+//       @media (min-width: $breakpoint-xl) {
+//         display: none;
+//       }
+//     }
+//   }
+//   & > .collapse > ul {
+//     & > .nav-item {
+//       @media (min-width: $breakpoint-xl) {
+//         height: 90px;
+//       }
+//       &:hover {
+//         @media (min-width: $breakpoint-xl) {
+//           .collapse {
+//             visibility: visible;
+//             display: flex;
+//             flex-direction: column;
+//             border-radius: 0;
+//           }
+//         }
+//       }
+//     }
+//     & > .dropdown {
+//       @media (min-width: $breakpoint-xl) {
+//         width: 103px;
+//       }
+//     }
+//     & > li {
+//       & > .collapse {
+//         background-color: $black;
+//         padding: 0;
+//         margin: 0;
+//         border: 0;
+//         @media (min-width: $breakpoint-xl) {
+//           visibility: hidden;
+//           display: flex;
+//           flex-direction: column;
+//           width: 220px;
+//         }
+//         .dropdown-item {
+//           color: $white;
+//           padding: 15px 28px;
+//           font-size: 14px;
+//           line-height: 20px;
+//           transition: ease 0.2s;
+//           @media (min-width: $breakpoint-xl) {
+//             padding: 18px;
+//           }
+//           &:hover {
+//             background-color: $black;
+//             @media (min-width: $breakpoint-xl) {
+//               background-color: $orange_bistre;
+//             }
+//           }
+//         }
+//       }
+//       & > .collapsing {
+//         background-color: $black;
+//         padding: 0;
+//         margin: 0;
+//         border: 0;
+//         .dropdown-item {
+//           color: $white;
+//           padding: 15px 28px;
+//           font-size: 14px;
+//           line-height: 20px;
+//         }
+//       }
+//       & > .nav-link {
+//         color: $white;
+//         font-size: 14px;
+//         line-height: 20px;
+//         padding: 15px 16px;
+//         margin: 0;
+//         &:hover {
+//           color: $white;
+//           text-decoration: none;
+//         }
+//         @media (min-width: $breakpoint-xl) {
+//           padding: 35px 20px;
+//           transition: ease 0.2s;
+//           &:hover {
+//             @media (min-width: $breakpoint-xl) {
+//               color: $gray_nobel;
+//             }
+//           }
+//         }
+//       }
+//       & > .mini-hamberger-header {
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         margin: 0;
+//         & > .nav-link {
+//           color: $white;
+//           margin: 0;
+//           font-size: 14px;
+//           line-height: 20px;
+//           padding: 15px 16px;
+//           @media (min-width: $breakpoint-xl) {
+//             padding: 35px 20px;
+//             transition: ease 0.2s;
+//           }
+//           &:hover {
+//             @media (min-width: $breakpoint-xl) {
+//               color: $gray_nobel;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   & > .collapsing > ul > li {
+//     & > .nav-link {
+//       color: $white;
+//       font-size: 14px;
+//       line-height: 20px;
+//       padding: 15px 16px;
+//       margin: 0;
+//     }
+//     & > .mini-hamberger-header {
+//       width: 100%;
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       margin: 0;
+//       & > .nav-link {
+//         color: $white;
+//         margin: 0;
+//         font-size: 14px;
+//         line-height: 20px;
+//         padding: 15px 16px;
+//       }
+//     }
+//   }
+// }

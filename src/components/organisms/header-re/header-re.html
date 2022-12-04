@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-xl navbar-light bg-light">
     <div class="header__inner container-fluid">
       <a class="navbar-brand" href="#">
         <img class="header__logo" src="../../../img/header.png" alt="ロゴ" />
@@ -24,8 +24,8 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
+            <div
+              class="concept__wrap"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -39,10 +39,11 @@
               aria-controls="collapseExample1"
               Link
               with
-              href
+              hrefs
             >
-              Concept
-            </a>
+              <a class="nav-link dropdown-toggle"> Concept </a>
+              <i class="fa-solid fa-plus"></i>
+            </div>
             <ul
               class="dropdown-menu"
               class="collapse"

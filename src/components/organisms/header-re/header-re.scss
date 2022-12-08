@@ -17,6 +17,15 @@ header {
       @media screen and (max-width: $breakpoint-xl) {
         padding: 20px 0 20px 16px;
       }
+
+      > img {
+        width: 140px;
+        height: 24px;
+        @media screen and (max-width: $breakpoint-xl) {
+          width: 120px;
+          height: 20px;
+        }
+      }
     }
 
     .fa-solid {
@@ -38,7 +47,6 @@ header {
 
     .header__list {
       flex-grow: inherit;
-      padding-right: 16px;
 
       @media screen and (max-width: $breakpoint-xl) {
         padding-left: 16px;
@@ -59,6 +67,8 @@ header {
             .plus-btn {
               display: flex;
               align-items: center;
+              padding-right: 16px;
+
               @media screen and (min-width: $breakpoint-xl) {
                 display: none;
               }
@@ -89,6 +99,7 @@ header {
           border-radius: 0%;
           @media screen and (max-width: $breakpoint-xl) {
             position: static;
+            width: 100%;
           }
 
           .dropdown-item {

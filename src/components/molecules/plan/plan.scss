@@ -1,0 +1,92 @@
+@import "../../variables";
+
+// 通常時のスタイル
+.plan {
+  margin: 0;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    margin-bottom: 20px;
+  }
+
+  .plan__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $orange_zorba;
+    color: $white;
+    font-size: $fontsize-l;
+    padding: 15.5px;
+    line-height: 29px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .plan__price-outer {
+    background-color: $gray_desertStorm;
+    border: 1px solid $gray_gainsboro;
+    border-bottom: none;
+
+    .and {
+      padding-top: 25px;
+      padding-right: 4px;
+      font-size: $fontsize-l;
+    }
+
+    .plan__price {
+      display: flex;
+      justify-content: center;
+      padding: 23px 0 16px;
+      font-family: $fontfamily-mincho;
+      font-weight: 700;
+      font-size: 40px;
+      color: $orange_bistre;
+      margin: 0;
+    }
+
+    .plan__month__price {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 24px;
+      margin: 0;
+    }
+  }
+
+  .plan__item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $white;
+  }
+
+  .plan__item:last-child {
+    border-bottom: 1px solid $gray_gainsboro;
+  }
+
+  .plan__item-list {
+    text-align: center;
+    padding: 20px 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $fontsize-s;
+    box-sizing: border-box;
+    border: 1px solid $gray_gainsboro;
+    border-bottom: none;
+  }
+
+  // スタンダード時のスタイル
+  &.plan-bold {
+    box-sizing: border-box;
+    border: 5px solid $orange_bistre;
+
+    .plan__title {
+      background-color: $orange_bistre;
+      box-sizing: border-box;
+      padding-top: 10.5px;
+    }
+
+    .plan__item-list:last-child {
+      padding-bottom: 15px;
+    }
+  }
+}

@@ -36,7 +36,7 @@
       display: flex;
       justify-content: center;
       padding: 23px 0 16px;
-      font-family: "Noto Sans JP";
+      font-family: $fontfamily-mincho;
       font-weight: 700;
       font-size: 40px;
       color: $orange_bistre;
@@ -75,7 +75,7 @@
   }
 
   // スタンダード時のスタイル
-  &.plan--std {
+  &.plan-bold {
     box-sizing: border-box;
     border: 5px solid $orange_bistre;
 

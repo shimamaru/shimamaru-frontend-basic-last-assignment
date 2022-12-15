@@ -1,0 +1,46 @@
+@import "../variables";
+
+.news-events__wrap {
+  background-color: $white_smoke;
+
+  .container {
+    padding-top: 56px;
+    padding-bottom: 56px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      column-gap: 40px;
+    }
+  }
+
+  .news {
+    width: 100%;
+    padding-bottom: 35px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
+  .events {
+    padding: 0;
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      flex: 1;
+      min-width: 0;
+
+      .event-card {
+        > a {
+          height: 143px;
+        }
+      }
+    }
+    .event-caption {
+      h3 {
+        font-weight: 400;
+      }
+    }
+  }
+}

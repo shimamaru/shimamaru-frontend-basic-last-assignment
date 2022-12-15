@@ -8,63 +8,73 @@ header {
     }
   }
 
-  .header__inner {
+  .navbar {
     padding: 0;
-    margin: 0;
-    .navbar-brand {
-      display: flex;
-      padding: 33px 0 33px 30px;
-      @media screen and (max-width: $breakpoint-xl) {
-        padding: 20px 0 20px 16px;
-      }
-
-      > img {
-        width: 140px;
-        height: 24px;
+    .header__inner {
+      padding: 0;
+      padding: 0 50px 0 30px;
+      margin: 0;
+      .navbar-brand {
+        display: flex;
+        padding: 33px 0;
         @media screen and (max-width: $breakpoint-xl) {
-          width: 120px;
-          height: 20px;
+          padding: 20px 0 20px 16px;
+        }
+
+        > img {
+          width: 140px;
+          height: 24px;
+          @media screen and (max-width: $breakpoint-xl) {
+            width: 120px;
+            height: 20px;
+          }
         }
       }
-    }
 
-    .fa-solid {
-      color: $white;
-    }
-
-    .navbar-toggler {
-      border: none;
-      padding: 22px 16px 22px 0;
-      box-shadow: none;
-    }
-
-    .navbar-light {
-      display: none;
-    }
-    .header__logo {
-      width: 140px;
-    }
-
-    .header__list {
-      flex-grow: inherit;
-
-      @media screen and (max-width: $breakpoint-xl) {
-        padding-left: 16px;
+      .fa-solid {
+        color: $white;
       }
-      .navbar-nav {
-        padding: 0;
-        margin: 0 !important;
 
-        .nav-item {
-          color: $white;
-          font-size: $fontsize-s;
-          text-transform: uppercase;
+      .navbar-toggler {
+        border: none;
+        padding: 22px 16px 22px 0;
+        box-shadow: none;
+      }
 
-          .concept__wrap {
-            display: flex;
-            justify-content: space-between;
+      .navbar-light {
+        display: none;
+      }
+      .header__logo {
+        width: 140px;
+      }
+
+      .header__list {
+        flex-grow: inherit;
+
+        @media screen and (max-width: $breakpoint-xl) {
+          padding-left: 16px;
+        }
+        .navbar-nav {
+          padding: 0;
+          margin: 0 !important;
+          column-gap: 40px;
+
+          .nav-item {
+            color: $white;
+            font-size: $fontsize-s;
+            text-transform: uppercase;
+            position: relative;
+
+            @media screen and (min-width: $breakpoint-xl) {
+              height: 90px;
+              display: flex;
+              align-items: center;
+            }
 
             .plus-btn {
+              position: absolute;
+              right: 0;
+              top: 0;
               display: flex;
               align-items: center;
               padding-right: 16px;
@@ -73,58 +83,61 @@ header {
                 display: none;
               }
             }
-          }
 
-          .nav-link {
-            color: $white !important;
-            transition: all 2s ease;
-            @media screen and (max-width: $breakpoint-xl) {
-              padding: 16px 0 !important;
+            .nav-link {
+              padding: 0;
+              color: $white !important;
+              transition: all 2s ease;
+              @media screen and (max-width: $breakpoint-xl) {
+                padding: 16px 0 !important;
+              }
+            }
+
+            .nav-link::after {
+              display: none;
             }
           }
 
-          .nav-link::after {
-            display: none;
-          }
-        }
-
-        .dropdown-menu {
-          position: absolute;
-          top: 71px;
-          background-color: $black;
-          width: 220px;
-          padding: 0;
-          margin: 0 !important;
-          border: none;
-          border-radius: 0%;
-          @media screen and (max-width: $breakpoint-xl) {
-            position: static;
-            width: 100%;
-          }
-
-          .dropdown-item {
-            display: flex;
-            align-items: center;
-            padding-left: 18px;
-            height: 56px;
-            color: $white;
-            font-size: $fontsize-s;
-            transition: all 0.2s ease;
-
-            &:hover {
-              background-color: $orange_bistre;
+          .dropdown {
+            .dropdown-menu {
+              position: absolute;
+              top: 90px;
+              background-color: $black;
+              width: 220px;
+              padding: 0;
+              margin: 0 !important;
+              border: none;
+              border-radius: 0%;
               @media screen and (max-width: $breakpoint-xl) {
-                background-color: $black !important;
+                position: static;
+                width: 100%;
+              }
+
+              .dropdown-item {
+                display: flex;
+                align-items: center;
+                padding-left: 18px;
+                height: 56px;
+                color: $white;
+                font-size: $fontsize-s;
+                transition: all 0.2s ease;
+
+                &:hover {
+                  background-color: $orange_bistre;
+                  @media screen and (max-width: $breakpoint-xl) {
+                    background-color: $black !important;
+                  }
+                }
               }
             }
           }
         }
       }
     }
-  }
-  @media screen and (min-width: $breakpoint-xl) {
-    .dropdown:hover > .dropdown-menu {
-      display: block;
+    @media screen and (min-width: $breakpoint-xl) {
+      .dropdown:hover > .dropdown-menu {
+        display: block;
+      }
     }
   }
 }

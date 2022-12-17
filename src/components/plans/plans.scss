@@ -1,0 +1,37 @@
+@import "../variables";
+
+.plans {
+  margin-bottom: 100px;
+  @media screen and (max-width: $breakpoint-md) {
+    margin-bottom: 35px;
+  }
+  .wrap {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    @media screen and (max-width: $breakpoint-md) {
+      flex-direction: column;
+      row-gap: 24px;
+      margin-top: 24px;
+    }
+
+    .plan {
+      width: 30%;
+      @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+      }
+
+      .plan__title {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .button {
+    margin: 45px auto 0;
+    @media screen and (max-width: $breakpoint-md) {
+      margin-top: 24px;
+    }
+  }
+}

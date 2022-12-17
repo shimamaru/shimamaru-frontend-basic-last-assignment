@@ -2,6 +2,9 @@
 
 .plans {
   margin-bottom: 100px;
+  @media screen and (max-width: $breakpoint-md) {
+    margin-bottom: 35px;
+  }
   .wrap {
     display: flex;
     justify-content: center;

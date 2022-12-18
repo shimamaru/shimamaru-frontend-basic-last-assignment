@@ -1,6 +1,8 @@
 @import "../../variables";
 
 header {
+  position: absolute;
+  width: 100%;
   .bg-light {
     background-color: $black_50 !important;
     @media screen and (max-width: $breakpoint-xl) {
@@ -93,6 +95,11 @@ header {
 
               &:hover {
                 color: $gray_nobel;
+                @media screen and (max-width: $breakpoint-xl) {
+                  &:hover {
+                    color: $white;
+                  }
+                }
               }
 
               @media screen and (max-width: $breakpoint-xl) {
